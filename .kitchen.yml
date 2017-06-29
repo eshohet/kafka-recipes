@@ -20,7 +20,8 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[kafka::default]
+      - recipe[kafka::setup]
+      - recipe[kafka::deploy]
     verifier:
       inspec_tests:
         - test/smoke/default
